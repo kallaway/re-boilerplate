@@ -4,10 +4,12 @@
 	"description": "A boilerplate to speed up development of React projects",
 	"main": "index.js",
 	"scripts": {
+		"build": "webpack",
 		"build-babel": "npm run build-babel-server && npm run build-babel-client",
 		"build-babel-server": "babel src/server --out-dir ./dist",
 		"build-babel-client": "babel src/client --copy-files --out-dir ./dist/public",
-		"start": "node ./dist/index.js",
+		"start": "node ./dist/server.js",
+		"clean": "rimraf dist node_modules",
 		"test": "jest ./src"
 	},
 	"repository": {
@@ -28,12 +30,15 @@
 		"express": "^4.16.2",
 		"react": "^16.2.0",
 		"react-dom": "^16.2.0",
+		"rimraf": "^2.6.2",
 		"webpack": "^3.10.0"
 	},
 	"devDependencies": {
 		"babel-cli": "^6.26.0",
+		"babel-loader": "^7.1.2",
 		"babel-preset-env": "^1.6.1",
 		"babel-preset-react": "^6.24.1",
-		"jest": "^22.1.4"
+		"jest": "^22.1.4",
+		"webpack-node-externals": "^1.6.0"
 	}
 }

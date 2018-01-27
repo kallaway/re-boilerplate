@@ -1,0 +1,30 @@
+{
+	"name": "re-boilerplate",
+	"version": "1.0.0",
+	"description": "A boilerplate to speed up development of React projects",
+	"main": "index.js",
+	"scripts": {
+		"build": "npm run build-server && npm run build-client",
+		"build-server": "babel src/server --out-dir ./dist",
+		"build-client": "babel src/client --copy-files --out-dir ./dist/public",
+		"start": "node ./dist/index.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Kallaway/re-boilerplate.git"
+	},
+	"keywords": ["React", "Boilerplate"],
+	"author": "Alexander Kallaway",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Kallaway/re-boilerplate/issues"
+	},
+	"homepage": "https://github.com/Kallaway/re-boilerplate#readme",
+	"dependencies": {
+		"express": "^4.16.2"
+	},
+	"devDependencies": {
+		"babel-cli": "^6.26.0",
+		"babel-preset-env": "^1.6.1"
+	}
+}
